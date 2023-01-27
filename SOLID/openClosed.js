@@ -1,4 +1,4 @@
-
+// O - SOLID PRINCIPLES
 // Open for extension but closed for modification 
 // Open for extension means that you can add new features to the code without affecting the existing code.
 // Closed for modification means that you can’t change the existing code to add new features.
