@@ -43,3 +43,5 @@ class Fish {
 
 const bird = new Bird("bird");
 bird.fly(); // bird is flying
+const fish = new Fish("fish");
+fish.swim(); // fish is swimming
