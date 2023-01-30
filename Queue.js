@@ -1,72 +1,33 @@
-// fifo principle
-class NodeList {
-    constructor(value, next) {
-        this.value = value;
-        this.next = null;
-    }
-}
+// queues
 
-
-class LinkedList {
-    constructor(head, tail) {
-        this.head = null;
-        this.tail = null;
+class Queue {
+    constructor(items) {
+        this.items = [];
     }
 
-    // add to the linkedlist
-    add(value) {
-        const newNode = new NodeList(value);
-
-        if (this.head === null){
-            this.head = newNode;
-            this.tail = newNode;
-        }
-        else {
-            this.tail.next = newNode;
-            this.tail = newNode;
-        }
-
+    enqueue(item) {
+        this.items.push(item);
     }
 
-    // remove from the linkedlist
-    remove() {
-        if (this.head === null) {
-            return null;
-        }
-
-        const value = this.head.value;
-        this.head = this.head.next;
-        return value;
+    dequeue() {
+        return this.items.shift();
     }
 
-    // peek at the linkedlist
-    peek() {
-        if (this.head === null) {
-            return null;
-        }
-
-        return this.head.value;
+    front() {
+        return this.items[0];
     }
 
-    //check if the linkedlist is empty
     isEmpty() {
-        return this.head === null;
+        return this.items.length === 0;
     }
 }
 
+const queue = new Queue();
+queue.enqueue(1);
+queue.enqueue(2);
+queue.enqueue(3);
 
-const queue = new LinkedList();
-queue.add(1);
-queue.add(2);
-// queue.add(3);
+console.log(queue.dequeue()); // 1
+console.log(queue.front()); // 2
+console.log(queue.isEmpty()); // false
 
-console.log(queue.remove());
-console.log(queue.remove());
-
-console.log(queue.peek());
-
-queue.add(3);
-queue.add(4);
-
-console.log(queue.peek())
-console.log(queue.isEmpty());

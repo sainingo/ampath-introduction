@@ -21,8 +21,8 @@ class FetchClient {
     }
 }
 
-const client = new FetchClient();
-client.get("https://jsonplaceholder.typicode.com/todos/1").then(res => res.json()).then(json => console.log(json));
+const client1 = new FetchClient();
+client1.get("https://jsonplaceholder.typicode.com/todos/1").then(res => res.json()).then(json => console.log(json));
 
 // Better approach is to separate them into two classes
 class Fetch {
