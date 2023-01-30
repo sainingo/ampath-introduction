@@ -41,6 +41,21 @@ class LinkedList {
 
         this.head = this.head.next;
     }
+
+    //search
+    search(value) {
+        let currentNode = this.head;
+
+        while(currentNode) {
+            if(currentNode.value === value) {
+                return currentNode;
+            }
+
+            currentNode = currentNode.next;
+        }
+
+        return null;
+    }
 }
 
 const list = new LinkedList();
@@ -50,6 +65,8 @@ list.add(2);
 list.add(3);
 
 console.log(list);
+
+console.log('search:', list.search(1));
 
 list.remove();
 
