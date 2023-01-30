@@ -45,3 +45,18 @@ const bird = new Bird("bird");
 bird.fly(); // bird is flying
 const fish = new Fish("fish");
 fish.swim(); // fish is swimming
+
+
+// Another explample
+class Document {
+    print() {
+      // logic for printing a document
+    }
+  }
+  
+  class PdfDocument extends Document {
+    generatePdf() {
+      // logic for generating a pdf document
+    }
+  }
+  

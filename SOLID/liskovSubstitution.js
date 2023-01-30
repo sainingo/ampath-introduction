@@ -48,3 +48,26 @@ const rectangle = new Rectangle(5, 10);
 const square = new Square(5);
 console.log(rectangle.area); // 50
 console.log(square.area); // 25
+
+
+
+// Another explample
+class Animal {
+  move() {
+    console.log('Animal moves');
+  }
+}
+
+class Bird extends Animal {
+  move() {
+    console.log('Bird flies');
+  }
+}
+
+//In this example, bird object can be substituted for an animal object in the makeAnimalMove function and still work correctly, adhering to the LSP.
+function makeAnimalMove(animal) {
+  animal.move();
+}
+
+const bird = new Bird();
+makeAnimalMove(bird); // Output: Bird flies
