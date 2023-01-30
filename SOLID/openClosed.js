@@ -33,3 +33,6 @@ class addMovieList {
         this.movies.push(movie);
     }
 }
+
+const movie = new Movie("harry potter");
+movie.watch(); // You are watching harry potter
