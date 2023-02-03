@@ -34,3 +34,8 @@ const teacher1 = new Teacher('Mary', 30, 'Math');
 
 console.log(student1);
 console.log(teacher1);
+
+
+
+
+
